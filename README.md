@@ -1,11 +1,50 @@
 # AIRFLOW_TUTORIAL
-Introduction
+## Introduction
 
 This repository is a hands-on learning project for Apache Airflow, an open-source platform for developing, scheduling, monitoring, and orchestrating data workflows.
 
 The project focuses on understanding the core concepts and practical patterns used when building data engineering pipelines with Airflow. Each DAG in the dags/ directory demonstrates a specific Airflow feature, allowing the concepts to be learned progressively from simple workflows to data-aware orchestration patterns.
 
-DAGs Overview
+---
+
+## Running with Docker Compose
+
+The easiest way to run Apache Airflow for this tutorial is using **Docker Compose**. Docker Compose allows you to start the Airflow environment and its required services with a single command.
+
+### 1. Start Airflow
+
+From the project root directory, run:
+
+```bash
+docker compose up -d
+```
+The `-d` option runs the containers in the background.
+
+
+### 2. Access the Airflow UI
+
+Once the containers are running, open your browser and navigate to:
+
+`http://localhost:8081`
+
+Default credentials:
+
+* **Username:** `airflow`
+* **Password:** `airflow`
+
+> The default credentials may be different if they have been changed in the Docker Compose configuration.
+
+### 3. Stop Airflow
+
+To stop the Airflow environment:
+
+```bash
+docker compose down
+```
+
+This stops and removes the containers created by Docker Compose while preserving the project files and mounted volumes.
+
+## DAGs Overview
 
 The dags/ folder contains a series of DAGs, with each DAG demonstrating a specific Airflow feature or workflow pattern.
 
